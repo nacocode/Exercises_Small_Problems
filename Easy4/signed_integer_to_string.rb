@@ -18,8 +18,6 @@ def signed_integer_to_string(number)
   end
 end
 
-
-
 p signed_integer_to_string(4321)
 p signed_integer_to_string(0)
 p signed_integer_to_string(+731)
