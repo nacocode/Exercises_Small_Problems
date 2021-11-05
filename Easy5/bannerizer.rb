@@ -4,27 +4,30 @@
 # |                                            |
 # +--------------------------------------------+
 
-def print_in_box(string)
-  length = string.size
-  
-  holizental_line(length)
-  empty_line(length)
-  string_line(string)
-  empty_line(length)
-  holizental_line(length)
-end
+def print_in_box(message)
+  hotizontal_line = "+-#{"-" * message.size}-+"
+  empty_line = "| #{" " * message.size} |"
+  string_line = "| #{message} |"
 
-def holizental_line(length)
-  puts "+-#{"-" * length}-+"
-end
-
-def empty_line(length)
-  puts "| #{" " * length} |"
-end
-
-def string_line(string)
-  puts "| #{string} |"
+  puts hotizontal_line
+  puts empty_line
+  puts string_line
+  puts empty_line
+  puts hotizontal_line
 end
 
 print_in_box('To boldly go where no one has gone before.')
 print_in_box("")
+
+#________Launch School Solution__________________________________
+
+def print_in_box(message)
+  horizontal_rule = "+#{'-' * (message.size + 2)}+"
+  empty_line = "|#{' ' * (message.size + 2)}|"
+
+  puts horizontal_rule
+  puts empty_line
+  puts "| #{message} |"
+  puts empty_line
+  puts horizontal_rule
+end
