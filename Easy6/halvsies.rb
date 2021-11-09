@@ -2,10 +2,7 @@ def halvsies(array)
   half = ((array.size.to_f / 2).round) - 1
   first = array[0..half] 
   second = array[(half + 1)..-1]
-  result = []
-  result << first
-  result << second
-  result
+  result = [first, second]
 end
 
 
