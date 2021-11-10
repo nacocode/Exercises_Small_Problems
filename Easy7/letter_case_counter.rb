@@ -1,7 +1,7 @@
-def letter_case_count(text)
+def letter_case_count(string)
   hash = { lowercase: 0, uppercase: 0, neither: 0 }
 
-  text.chars.each do |value|
+  string.chars.each do |value|
     if /[a-z]/.match?(value)
       hash[:lowercase] += 1
     elsif /[A-Z]/.match?(value)
