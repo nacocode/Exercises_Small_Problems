@@ -16,15 +16,17 @@ def substrings(string)
 end
 
 def palindromes(string)
-  palindromic_words = []
-  substrings(string).each do |substring|
-    if substring.size < 2
-      next
-    elsif substring == substring.reverse
-      palindromic_words << substring
-    end
+  all_substrings = substrings(string)
+  results = []
+
+  all_substrings.each do |substring|
+    results << substring if palindrome?(substring)
   end
-  palindromic_words
+  results
+end
+
+def palindrome?(string)
+  string == string.reverse && string.size >= 2
 end
 
 p palindromes('abcd') == []
