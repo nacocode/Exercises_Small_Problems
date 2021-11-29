@@ -1,12 +1,10 @@
 def twice(num)
-  string_num = num.to_s.chars
+  string_num = num.to_s
   center = string_num.size / 2
-
-  if string_num.size < 2 || string_num[0..center - 1] != string_num[center..-1]
-    string_num.join.to_i * 2
-  elsif string_num[0..center - 1] == string_num[center..-1]
-    string_num.join.to_i
-  end
+  left_side = string_num[0..center - 1]
+  right_side = center.zero? ? '' : string_num[center..-1]
+  return num if left_side == right_side
+  return num * 2
 end
 
 p twice(37) == 74
