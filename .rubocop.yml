@@ -1,4 +1,5 @@
-AllCops:
+AllCops: 
+  NewCops: enable
   # Display cop names
   DisplayCopNames: true
   # Display Extra details
@@ -12,7 +13,7 @@ AllCops:
   StyleGuideBaseURL: https://rubystyle.guide/
   # What version of the Ruby interpreter is the inspected code intended to
   # run on? (If there is more than one, set this to the lowest version.)
-  TargetRubyVersion: 2.4
+  TargetRubyVersion: 2.5, 2.6, 2.7, 3.0, 3.1
 
 Style/BlockComments:
   Description: 'Do not use block comments.'
