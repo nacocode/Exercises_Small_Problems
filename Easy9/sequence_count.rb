@@ -1,9 +1,5 @@
 def sequence(count_num, first_num)
-  sequence = []
-  count_num.times do |i|
-    sequence << (first_num * (i + 1))
-  end
-  sequence
+  (1..count_num).map { |value| first_num * value }
 end
 
 p sequence(5, 1) == [1, 2, 3, 4, 5]
