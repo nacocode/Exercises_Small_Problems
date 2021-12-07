@@ -2,14 +2,14 @@ def diamond(num)
   star = 1
   center_row = (num + 1) / 2
 
-  (1..center_row).each do
+  (1..center_row - 1).each do
     puts ("*" * star).center(num)
     star += 2
   end
-  star -= 2
-  ((center_row + 1)..num).each do
-    star -= 2
+
+  ((center_row)..num).each do
     puts ("*" * star).center(num)
+    star -= 2
   end
 end
 
