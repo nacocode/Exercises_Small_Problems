@@ -2,8 +2,8 @@ def rotate_array(array)
   array[1..-1] + [array[0]]
 end
 
-def rotate_rightmost_digits(numbers, digit)
-  all_digits = numbers.to_s.chars
+def rotate_rightmost_digits(number, digit)
+  all_digits = number.to_s.chars
   all_digits[-digit..-1] = rotate_array(all_digits[-digit..-1])
   all_digits.join.to_i
 end
