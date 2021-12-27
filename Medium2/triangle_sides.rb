@@ -1,5 +1,3 @@
-TRIANGLES = [:equilateral, :isosceles, :scalene]
-
 def triangle(side1, side2, side3)
   sides = [side1, side2, side3].sort
 
